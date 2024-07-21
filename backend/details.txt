@@ -1,0 +1,103 @@
+We will be storing common fields in parent level, and varying stuff in variants modal
+
+// CONSIDER IF WE HAVE "RED", "BLUE", for sizes "L", "XL"
+// WE WILL MAKE 2*2 entries in variants
+// RED - XL
+// RED - L
+// BLUE - XL
+// BLUE - L
+
+// we will maintain variantsToConsider field to know what are actually variants so we can show options in UI
+// Example: for mobiles, we might have RAM, Storage
+// Then variantsToConsider will be ["RAM", "Storage"]
+
+By this approach, we will having ability to accomdate "n" number of variants
+
+{
+  "productShow": true,
+  "title": "Sample Product",
+  "ratings": 4.5,
+  "description": "This is a sample product description.",
+  "highlights": ["Highlight 1", "Highlight 2"],
+  "about": ["About detail 1", "About detail 2"],
+  "reviewRatings": [],
+  "productImg": "url_to_product_image.jpg",
+  "productImages": ["url_to_image1.jpg", "url_to_image2.jpg"],
+  "category": {
+    "c_id": "cat123",
+    "name": "Electronics"
+  },
+  "sub_category": {
+    "sub_id": "subcat456",
+    "name": "Mobile Phones"
+  },
+  "relatedProductIds": ["prod789", "prod101"],
+  "variants": [
+    {
+      "color": "Red",
+      "price": 100,
+      "mrp": 120,
+      "discountInPercentage": "16.67",
+      "productAvailable": true,
+      "itemStockLeft": 20,
+      "productImages": [
+        "url_to_variant_image1.jpg",
+        "url_to_variant_image2.jpg"
+      ],
+      "size": "XL"
+    },
+    {
+      "color": "Red",
+      "price": 100,
+      "mrp": 120,
+      "discountInPercentage": "16.67",
+      "productAvailable": true,
+      "itemStockLeft": 20,
+      "productImages": [
+        "url_to_variant_image1.jpg",
+        "url_to_variant_image2.jpg"
+      ],
+      "size": "L"
+    },
+    {
+      "color": "Red",
+      "price": 100,
+      "mrp": 120,
+      "discountInPercentage": "16.67",
+      "productAvailable": true,
+      "itemStockLeft": 20,
+      "productImages": [
+        "url_to_variant_image1.jpg",
+        "url_to_variant_image2.jpg"
+      ],
+      "size": "L"
+    },
+    {
+      "color": "Blue",
+      "price": 100,
+      "mrp": 120,
+      "discountInPercentage": "16.67",
+      "productAvailable": true,
+      "itemStockLeft": 20,
+      "productImages": [
+        "url_to_variant_image1.jpg",
+        "url_to_variant_image2.jpg"
+      ],
+      "size": "XL"
+    },
+    {
+      "color": "Blue",
+      "price": 100,
+      "mrp": 120,
+      "discountInPercentage": "16.67",
+      "productAvailable": true,
+      "itemStockLeft": 20,
+      "productImages": [
+        "url_to_variant_image1.jpg",
+        "url_to_variant_image2.jpg"
+      ],
+      "size": "L"
+    }
+  ],
+  variantsToConsider: ["Size", 'Color']
+}
