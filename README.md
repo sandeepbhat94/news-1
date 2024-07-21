@@ -30,4 +30,4 @@ GET /api/news/:text :=> Performs a search based on user input.
 4. You can view news articles, perform searches, and read articles in detail.
 
 
-## Due to unforeseen circumstances, this project was completed in a single day. Future enhancements include adding pagination for the news list and improving search functionality.
+## Due to unforeseen circumstances, this project was completed in a few hour. Future enhancements include adding pagination for the news list and improving search functionality.
