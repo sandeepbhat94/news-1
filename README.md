@@ -29,5 +29,3 @@ GET /api/news/:text :=> Performs a search based on user input.
 3. Once the application starts, it will run on port 3000, and news content will be loaded automatically.
 4. You can view news articles, perform searches, and read articles in detail.
 
-
-## Due to unforeseen circumstances, this project was completed in a few hour. Future enhancements include adding pagination for the news list and improving search functionality.
