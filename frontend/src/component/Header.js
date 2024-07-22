@@ -20,15 +20,17 @@ function Header() {
 
     //Debouncing for api call
     useEffect(() => {
-        const handler = setTimeout(async () => {
-            const res = await getRequest(`news/${searchTerm}`);
-            setSuggestions(res.data);
-
-        }, 1000);
-
-        return () => {
-            clearTimeout(handler);
-        };
+        if(searchTerm){
+            const handler = setTimeout(async () => {
+                const res = await getRequest(`news/${searchTerm}`);
+                setSuggestions(res?.data);
+    
+            }, 1000);
+    
+            return () => {
+                clearTimeout(handler);
+            };
+        }
     }, [searchTerm])
 
     // Function to handle input change
@@ -75,7 +77,7 @@ function Header() {
                 )}
                 {showSuggestions && searchTerm && (
                     <ul className="related-items">
-                        {suggestions.map((news, index) => (
+                        {suggestions?.map((news, index) => (
                             <Link to={`/news/${news.author}`} key={index} className="news-item-link">
                                 <span onClick={() => setTimeout(() => { window.location.reload() }, 100)}>
                                     <NewsCard
